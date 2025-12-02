@@ -14,7 +14,7 @@ pipeline {
   // VARIABLES GLOBALES
   ////////////////////////////////////////////////////////////////////////////
   environment {
-    DOCKER_IMAGE = "donald284/ultimate-cicd:${BUILD_NUMBER}"
+    DOCKER_IMAGE = "ndiayeinf/ultimate-cicd:${BUILD_NUMBER}"
     GIT_REPO_NAME = "Formation-Devops"
     //GIT_USER_NAME = "donaldte",
     GIT_USER_NAME = "Ndiayeinfo"
