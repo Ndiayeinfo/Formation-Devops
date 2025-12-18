@@ -5,7 +5,7 @@ pipeline {
   ////////////////////////////////////////////////////////////////////////////
   agent {
     docker {
-      image 'ndiayeinf/maven-jenkins-agent:v3'
+      image 'donald284/maven-jenkins-agent:v3'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
