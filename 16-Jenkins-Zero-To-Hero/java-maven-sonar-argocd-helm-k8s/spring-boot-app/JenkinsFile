@@ -5,7 +5,7 @@ pipeline {
   ////////////////////////////////////////////////////////////////////////////
   agent {
     docker {
-      image 'donald284/maven-jenkins-agent:v3'
+      image 'ndiayeinf/maven-jenkins-agent:v3'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
@@ -16,7 +16,6 @@ pipeline {
   environment {
     DOCKER_IMAGE = "ndiayeinf/ultimate-cicd:${BUILD_NUMBER}"
     GIT_REPO_NAME = "Formation-Devops"
-    //GIT_USER_NAME = "donaldte",
     GIT_USER_NAME = "Ndiayeinfo"
     // SONAR_URL vient de Jenkins (global env var)
   }
@@ -50,7 +49,7 @@ pipeline {
     /////////////////////////////////////////////////////////
     // 2. ANALYSE SONARQUBE
     /////////////////////////////////////////////////////////
-    stage('2. Analyse Statistique SonarQube') {
+    stage('2. Analyse Statique SonarQube') {
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
           sh """
