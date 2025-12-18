@@ -47,7 +47,7 @@ pipeline {
     }
 
     /////////////////////////////////////////////////////////
-    // 2. ANALYSE SONARQUBE
+    // 2. ANALYSE STATIQUE SONARQUBE
     /////////////////////////////////////////////////////////
     stage('2. Analyse Statique SonarQube') {
       steps {
